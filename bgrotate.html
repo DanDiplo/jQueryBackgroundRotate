@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jQuery Background Rotate Example by Dan Diplo</title>
+	<style type="text/css">
+		body {
+			background-color:#fff;
+			color:#000;
+			font-family:arial, san-serif;
+		}
+	</style>
+</head>
+<body id="body">
+
+	<h1>jQuery Background Rotator Example</h1>
+	
+	<p>
+		This page demonstrates my very simple jQuery plug-in that rotates a sequence of background images, using a delay, on a DOM element.<br />
+		Because it's ancient it works with really old browsers and jQuery versions - but also works with newer ones, too :)
+	</p>
+	
+	<p>
+		This page has 3 examples. Two DIV elements and the BODY element. The code to call them is shown below
+	</p>
+	<pre style="background-color:#eee;padding:8px">
+$(document).ready(function()
+{
+	$("body").bgrotate({ delay: 4000, imagedir: "/images/backgrounds/", images: ["249.jpg", "335.jpg", "419.gif", "87.jpg", "96830.png"] });
+	$("#div1").bgrotate({ delay: 800, imagedir: "/images/backgrounds/", images: ["pattern8-pattern-58a.png", "419.gif"] });
+	$("#div2").bgrotate({ delay: 1200, imagedir: "/images/backgrounds/", images: ["Rust_Peel.jpg", "WetPaint2.jpg", "Old_Dollhouse.jpg"] });
+});
+	</pre>
+
+	<div id="div1" style="width:400px;height:400px;background-color:red;margin:10px; padding:10px; float:left">
+		<h2>div1</h2>
+		Mauris quis mollis nunc. Proin eget sapien lectus, vitae placerat mi. Nulla lobortis magna vitae diam aliquet tempus. Nulla dignissim odio quis ante tincidunt faucibus. Nam in mi felis, ac hendrerit nisl. Praesent in venenatis est. Aenean lacinia accumsan nisi dignissim pellentesque. Vestibulum pellentesque placerat erat, sit amet pulvinar libero commodo sed. Nulla dapibus mi auctor mi sollicitudin in molestie mi euismod. Pellentesque sodales tincidunt congue. Curabitur pharetra condimentum interdum. Donec et sem ac neque bibendum euismod. Mauris commodo vulputate dui, eu sagittis sem vehicula non. Ut ultricies ultrices placerat. Ut tristique arcu nec augue ornare iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris urna ante, accumsan sed tristique quis, suscipit nec magna.
+	</div>
+	<div id="div2" style="width:300px;height:300px;background-color:green;margin:10px; padding:10px; float:left">
+		<h2>div2</h2>
+		Etiam dictum nulla vel turpis pretium id ornare augue scelerisque. Sed neque arcu, ornare vitae adipiscing vel, cursus non turpis. Fusce sit amet risus turpis. Maecenas odio orci, lobortis eget semper at, egestas nec diam. Cras in convallis lacus. Vestibulum pellentesque iaculis aliquet. Duis dictum erat eget mauris fringilla sed dignissim est placerat. Nam auctor, diam et molestie facilisis, magna turpis congue lectus, sit amet vehicula purus nunc tincidunt erat. Quisque luctus massa quis nulla ultricies ullamcorper eu vel nibh. Integer pharetra arcu lacus.
+	</div>
+	<hr style="clear:both" />
+	<p>
+		See <a href="http://www.diplo.co.uk/" target="_blank">www.diplo.co.uk</a>
+	</p>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="./jquery.diplo.bgrotate.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("body").bgrotate({ delay: 4000, imagedir: "./images/backgrounds/", images: ["249.jpg", "335.jpg", "419.gif", "87.jpg", "96830.png"] });
+			$("#div1").bgrotate({ delay: 800, imagedir: "./images/backgrounds/", images: ["pattern8-pattern-58a.png", "419.gif"] });
+			$("#div2").bgrotate({ delay: 1200, imagedir: "./images/backgrounds/", images: ["Rust_Peel.jpg", "WetPaint2.jpg", "Old_Dollhouse.jpg"] });
+		});
+	</script>
+
+</body>
+</html>
